@@ -1,0 +1,200 @@
+/* css reset from joshwcomeau.com */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+:root {
+    --clr-primary-1: hsl(225, 100%, 94%);
+    --clr-primary-2: hsl(245, 75%, 52%);
+    --clr-neutral-1: hsl(225, 100%, 98%);
+    --clr-neutral-2: hsl(224, 23%, 55%);
+    --clr-neutral-3: hsl(223, 47%, 23%);
+    --font-medium: 500;
+    --font-bold: 700;
+    --font-bolder: 900;
+}
+
+body {
+    display: grid;
+    place-content: center;
+    padding: 0 1rem;
+    background: var(--clr-primary-1) url(/images/pattern-background-mobile.svg) no-repeat;
+    background-size: contain;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+main {
+    background: var(--clr-neutral-1);
+    max-width: 450px;
+    border-radius: 1.25rem;
+}
+
+.summary-hero-svg img {
+    border-top-left-radius: 1.25rem;
+    border-top-right-radius: 1.25rem;
+}
+
+.summary {
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    gap: 2rem;
+    padding: 1.5rem;
+}
+
+header {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    padding: .5rem 1rem;
+}
+
+.summary-heading {
+    font-size: 1.35rem;
+    font-weight: var(--font-bolder);
+    color: var(--clr-neutral-3);
+}
+
+.summary-para {
+    font-weight: var(--font-bold);
+    color: var(--clr-primary-2);
+    opacity: .5;
+    line-height: 1.64;
+}
+
+.summary-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: hsla(224, 23%, 55%, 0.03);
+    border-radius: .5rem;
+}
+
+.plan-heading {
+    font-size: 1.0625rem;
+    font-weight: var(--font-bolder);
+    color: var(--clr-neutral-3);
+}
+
+.summary-price {
+    font-size: .9375rem;
+    color: var(--clr-neutral-2);
+    justify-self: flex-start;
+    margin-right: 32px;
+    text-align: left;
+}
+
+button {
+    border: none;
+    background: inherit;
+    cursor: pointer;
+}
+
+.summary-change {
+    background: transparent;
+    font-weight: var(--font-bold);
+    color: var(--clr-primary-2);
+    text-decoration: underline;
+}
+
+.summary-change:hover {
+    color: var(--clr-neutral-2);
+    text-decoration: none;
+}
+
+footer {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1.5rem;
+}
+
+.summary-proceed {
+    background: var(--clr-primary-2);
+    margin: .64rem 0 0;
+    padding: .8rem 0;
+    font-weight: var(--font-bold);
+    color: var(--clr-neutral-1);
+    border-radius: .75rem;
+}
+
+.summary-proceed:hover {
+    background: hsla(245, 75%, 52%, .6);
+}
+
+.summary-cancel {
+    font-weight: var(--font-bolder);
+    color: var(--clr-neutral-2);
+    width: max-content;
+    margin: 0 auto;
+}
+
+.summary-cancel:hover {
+    color: var(--clr-neutral-3);
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        background: var(--clr-primary-1) url('/images/pattern-background-desktop.svg') no-repeat;
+        background-size: contain;
+    }
+    .summary {
+        padding: 2rem 2rem 2.5rem;
+    }
+    .summary-heading {
+        font-size: 1.75rem;
+    }
+    .summary-flex {
+        margin-block-start: .75rem;
+    }
+    footer {
+        margin-block: 1.25rem .85rem;
+    }
+}
